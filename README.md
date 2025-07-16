@@ -1,59 +1,31 @@
 # My-new-project-
 Building AI course project
-# ai_text_summarizer.py
 
-from transformers import pipeline
+# My AI Project
 
-# Load the summarization pipeline
-summarizer = pipeline("summarization")
+## Summary
 
-# Input text
-text = """
-Artificial Intelligence (AI) is a field of computer science that aims to create machines 
-that can perform tasks that would typically require human intelligence. These tasks include 
-problem-solving, understanding language, recognizing patterns, learning from data, and making decisions. 
-AI is transforming industries such as healthcare, finance, transportation, and education by enabling 
-smarter and faster operations.
-"""
+This project is created as part of the [Elements of AI - Building AI](https://buildingai.elementsofai.com/) course.  
+The idea is to build a simple AI model that can classify whether a short text is a positive or negative sentiment using basic natural language processing and machine learning.
 
-# Summarize the text
-summary = summarizer(text, max_length=60, min_length=25, do_sample=False)
+## Background
 
-# Print the summary
-print("Summary:")
-print(summary[0]['summary_text'])
-# 🧠 AI Text Summarizer
+Understanding sentiment from text is useful in customer reviews, social media monitoring, and feedback analysis.  
+This project uses a preprocessed dataset of labeled sentences and applies a basic neural network classifier.
 
-This project uses a pre-trained transformer model to summarize long text passages. It was built as part of my learning journey with Google Cloud AI Certificate.
+## How It Works
 
-## 🔍 Description
-- Input: Long text
-- Output: Short, summarized version
-- Model: HuggingFace Transformers (`pipeline("summarization")`)
+- Data cleaning (stop words, lowercase, punctuation)
+- Convert text to numerical vectors using TF-IDF
+- Use a feedforward neural network with Keras or Scikit-learn
+- Train the model and test accuracy
 
-## 📦 Technologies Used
-- Python
-- HuggingFace Transformers
-- Pre-trained model (BART/T5)
+## Future Improvements
 
-## ▶️ How to Run
-```bash
-pip install transformers torch
-python ai_text_summarizer.py
----
+- Use a bigger dataset like IMDB or Twitter
+- Try a transformer model (like BERT)
+- Add web interface to type a sentence and get prediction
 
-### 📎 What to Do Next:
-1. Create a GitHub repo.
-2. Upload:
-   - `ai_text_summarizer.py`
-   - `README.md`
-3. Share the repo link in your resume or Google certificate submission!
+## Author
 
----
-
-Would you like me to:
-- 🧾 Generate a **PDF certificate-style project report**?
-- 🗣️ Translate the README into **Tamil**?
-- 📤 Help you upload to GitHub step-by-step?
-
-Let me know!
+Yuvaraj (GitHub: [@yuvaraj-29-design](https://github.com/yuvaraj-29-design))
